@@ -5,7 +5,8 @@
 ```
 apt install certbot -y
 
-certbot certonly --standalone -d "myweb.dev-ops.expert" --preferred-challenges http --agree-tos -n -m "alperenhasanselcuk@gmail.com" --keep-until-expiring
+sudo certbot certonly --manual --preferred-challenges=dns --email alperenhasanselcuk@gmail.com  --server https://acme-v02.api.letsencrypt.org/directory --agree-tos -d myweb.dev-ops.expert
+
 ```
 
 daha sonra kubernetes e bu sertifika ve key i eklemek için secret kullanacağız.
