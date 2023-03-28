@@ -24,3 +24,10 @@ helm repo update
 helm install ingress-nginx ingress-nginx/ingress-nginx -n ingress-nginx --create-namespace
 ````
 
+denemek için bir nginx app deploy edelim.
+
+```
+kubectl create deploy myweb --image=nginx replicas=2
+
+kubectl expose deploy/myweb --port 80
+```
